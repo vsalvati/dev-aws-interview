@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    aws:
+      sqs:
+        enabled: false
+  flyway:
+    locations: classpath:db/migration
