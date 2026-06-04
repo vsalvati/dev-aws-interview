@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}
+    username: ${RDS_USERNAME}
+    password: ${RDS_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+cloud:
+  aws:
+    region:
+      static: ${AWS_REGION:us-east-1}
+
+logging:
+  pattern:
+    console: '{"timestamp":"%d","level":"%p","logger":"%logger","message":"%m"}%n'
